@@ -1,0 +1,42 @@
+/* Header.css */
+
+.header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* Items on the left and right */
+  align-items: center;
+}
+
+.nav-items {
+  /* Style the navigation items (on the left) */
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+}
