@@ -1,0 +1,29 @@
+/* About.scss */
+
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.about-description:last-child {
+  margin-bottom: 0;
+}

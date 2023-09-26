@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./ProductCard.styles.scss";
+import ProductModal from "./ProductModal";
 
 function ProductCard({ product }) {
   const [cartItems, setCartItems] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+
+  const closeModal = () => setIsModalOpen(false);
 
   const addToCart = () => {
     setCartItems(cartItems + 1);
@@ -26,7 +32,18 @@ function ProductCard({ product }) {
         <div className="product-rating">Rating: {product.rating}</div>
         <div className="product-price">Price: ${product.price}</div>
         <div className="product-stock">Stock: {product.stock} available</div>
-        {/* Buttons for adding and removing from cart */}
+        <button className="view-details-button" onClick={openModal}>
+          View Details
+        </button>
+
+        {isModalOpen && (
+          <ProductModal
+            isOpen={isModalOpen}
+            onClose={closeModal}
+            product={product}
+          />
+        )}
+
         <div className="cart-buttons">
           <button className="add-to-cart-button" onClick={addToCart}>
             Add to Cart

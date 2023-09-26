@@ -34,7 +34,9 @@ function Products() {
   return (
     <div>
       {isLoading ? (
-        <Spinner />
+        <div className="spinner-container">
+          <Spinner />
+        </div>
       ) : (
         <div className="pagination-example-container">
           <div className="product-container">

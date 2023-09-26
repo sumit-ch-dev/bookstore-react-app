@@ -1,0 +1,119 @@
+.cart-modal {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #fff;
+  width: 300px;
+  max-height: calc(100% - 40px);
+  overflow-y: auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+/* Cart Modal Header */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.cart-header h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Cart Item Styles */
+.cart-items {
+  max-height: 250px;
+  /* Adjust the maximum height as needed */
+  overflow-y: auto;
+  /* Enable vertical scrolling if needed */
+  margin-bottom: 20px;
+  /* Add margin at the bottom for spacing */
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  /* Add a horizontal border between cart items */
+}
+
+.item-name {
+  flex-grow: 1;
+  color: #333;
+  /* Dark gray text color for item names */
+  font-weight: bold;
+}
+
+.item-price {
+  margin: 10px 10px;
+  color: #007bff;
+  /* Blue text color for item prices */
+}
+
+
+.remove-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c82333;
+  }
+}
+
+/* Cart Footer Styles */
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.cart-footer p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.checkout-button {
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #00ff00;
+    color: #fff;
+  }
+}

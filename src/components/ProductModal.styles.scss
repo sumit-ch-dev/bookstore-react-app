@@ -1,0 +1,143 @@
+/* Modal Background Styles */
+.product-modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Modal Container Styles */
+.product-modal-container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 80%; /* Adjust the width as needed */
+  max-width: 600px; /* Maximum width for the modal */
+  opacity: 0; /* Start with opacity set to 0 */
+  transform: translateY(-20px); /* Start with a slight upward translation */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.product-modal-container.open {
+  opacity: 1; /* Set opacity to 1 when modal is open */
+  transform: translateY(0); /* Reset the transform when modal is open */
+}
+
+/* Close Button Styles */
+.product-modal-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #555; /* Close button color */
+  background-color: transparent;
+  border: none;
+}
+
+/* Modal Content Styles */
+.product-modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Product Details Styles */
+.product-modal-details {
+  display: flex;
+  align-items: center;
+}
+
+.product-modal-image {
+  flex: 1;
+  position: relative;
+  margin-right: 20px;
+}
+
+.product-modal-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-modal-info {
+  flex: 2;
+  text-align: left;
+}
+
+/* Additional Product Details Styles */
+.product-modal-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-modal-additional-details {
+  margin-top: 10px;
+}
+
+.product-modal-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007bff; /* Price color */
+}
+
+.product-modal-rating {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ffa500; /* Rating color (e.g., orange) */
+}
+
+.product-modal-stock {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-modal-brand {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-modal-category {
+  font-size: 16px;
+}
+
+/* Slideshow Styles */
+.product-modal-slideshow {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-modal-prev-button,
+.product-modal-next-button {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.product-modal-prev-button {
+  margin-right: 10px;
+}
+
+.product-modal-next-button {
+  margin-left: 10px;
+}
+
+/* Add any additional styles as needed */

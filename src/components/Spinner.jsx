@@ -1,7 +1,8 @@
-import "./Spinner.styles.scss";
+import React from "react";
+import "./Spinner.styles.scss"; // Import the Spinner styles
 
-function Spinner() {
+const Spinner = () => {
   return <div className="spinner"></div>;
-}
+};
 
 export default Spinner;
