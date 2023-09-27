@@ -1,23 +1,24 @@
 import { useState } from "react";
 import "./ProductCard.styles.scss";
 import ProductModal from "./ProductModal";
+import { useCart } from "./CartContext";
 
 function ProductCard({ product }) {
-  const [cartItems, setCartItems] = useState(0);
+  // const [cartItems, setCartItems] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { addToCart, removeFromCart } = useCart();
 
   const openModal = () => setIsModalOpen(true);
 
   const closeModal = () => setIsModalOpen(false);
 
-  const addToCart = () => {
-    setCartItems(cartItems + 1);
+  const handleAddToCart = () => {
+    console.log("adding product to cart");
+    addToCart(product);
   };
 
-  const removeFromCart = () => {
-    if (cartItems > 0) {
-      setCartItems(cartItems - 1);
-    }
+  const handleRemoveFromCart = () => {
+    removeFromCart(product.id);
   };
   return (
     <div className="product-card">
@@ -45,16 +46,17 @@ function ProductCard({ product }) {
         )}
 
         <div className="cart-buttons">
-          <button className="add-to-cart-button" onClick={addToCart}>
+          <button className="add-to-cart-button" onClick={handleAddToCart}>
             Add to Cart
           </button>
-          <button className="remove-from-cart-button" onClick={removeFromCart}>
+          <button
+            className="remove-from-cart-button"
+            onClick={handleRemoveFromCart}
+          >
             Remove from Cart
           </button>
         </div>
       </div>
-
-      <div className="cart-count">Cart Items: {cartItems}</div>
     </div>
   );
 }

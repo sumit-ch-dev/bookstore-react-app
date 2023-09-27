@@ -69,6 +69,11 @@
   /* Blue text color for item prices */
 }
 
+.item-quantity {
+  flex-grow: 1;
+  color: #333;
+  font-weight: bold;
+}
 
 .remove-button {
   background-color: #dc3545;
